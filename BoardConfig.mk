@@ -172,6 +172,7 @@ TW_EXCLUDE_HAPTICS := true
 TW_EXTRA_LANGUAGES := false
 # Includes
 TW_INCLUDE_RESETPROP := false
+TW_INCLUDE_LIBRESETPROP := false
 #TW_INCLUDE_LPTOOLS := true
 #TW_USE_TOOLBOX := true
 #TW_INCLUDE_NTFS_3G := true
@@ -182,7 +183,7 @@ TW_FRAMERATE := 60
 TW_HAS_MTP := true
 TW_NO_FLASH_CURRENT_TWRP := true
 # Use QCOM-style rendering if MTK surfaceflinger is absent
-TW_GRAPHICS_FORCE_USE_LINELENGTH := true
+#TW_GRAPHICS_FORCE_USE_LINELENGTH := true
 
 # Status bar alignment
 TW_STATUS_ICONS_ALIGN := center
