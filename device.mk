@@ -48,20 +48,6 @@ PRODUCT_TARGET_VNDK_VERSION := 31
 # API
 PRODUCT_SHIPPING_API_LEVEL := 32
 
-# Health HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
-    #libhealthd.$(PRODUCT_PLATFORM)
-
-# Boot Control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl.recovery \
-    android.hardware.boot@1.2-mtkimpl
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctrl
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
@@ -96,13 +82,4 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 #PRODUCT_PACKAGES += \
 #    mtk_plpath_utils \
 #    mtk_plpath_utils.recovery
-
-# Recovery modules
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libkeymaster41 \
-
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
 
