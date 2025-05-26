@@ -24,8 +24,10 @@ AB_OTA_PARTITIONS += \
     vbmeta_system \
     vbmeta_vendor \
 
-
+# Use boot.img to flash TWRP
 BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+BOARD_HAS_NO_REAL_RECOVERY_PARTITION := true
 
 # Architecture
 TARGET_ARCH := arm64
