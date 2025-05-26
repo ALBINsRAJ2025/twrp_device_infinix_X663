@@ -1,3 +1,22 @@
+on early-init
+    mkdir /cache 0770 system system
+    mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache wait,check,formattable
+    chmod 0770 /cache
+    chown system system /cache
+    write /cache/mytesttwrp.log "== TWRP early init reached =="
+    start adbd
+
+service adbd /sbin/adbd
+    class core
+    seclabel u:r:adbd:s0
+    user root
+    group root shell
+    disabled
+    oneshot
+
+on property:sys.usb.ffs.ready=1
+    start adbd
+
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 0
