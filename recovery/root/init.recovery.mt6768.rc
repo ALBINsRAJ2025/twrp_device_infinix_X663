@@ -1,12 +1,23 @@
 import /init.decrypt.rc
-import /vibrator-penangf.rc
 
-# Modules
 on early-init
-    # Load touch-related modules
-    insmod /vendor/lib/modules/chipone9916.ko
-    insmod /vendor/lib/modules/ilitek.ko
-    insmod /vendor/lib/modules/omnivision_tcm.ko
+    mkdir /cache 0770 system system
+    mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache wait,check,formattable
+    chmod 0770 /cache
+    chown system system /cache
+    write /cache/mytesttwrp.log "== TWRP early init reached =="
+    start adbd
+
+service adbd /sbin/adbd
+    class core
+    seclabel u:r:adbd:s0
+    user root
+    group root shell
+    disabled
+    oneshot
+
+on property:sys.usb.ffs.ready=1
+    start adbd
 
 on post-fs 
     start boot-hal-1-2

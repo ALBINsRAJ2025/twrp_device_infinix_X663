@@ -142,6 +142,7 @@ service mobicore /vendor/bin/mcDriverDaemon --sfs-reformat --P1 /mnt/vendor/pers
 	-r /vendor/app/mcRegistry/036c0000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/037c0000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin \
+	-r /vendor/app/mcRegistry/070c0000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/090b0000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/0f5eed3c3b5a47afacca69a84bf0efad.drbin \
 	-r /vendor/app/mcRegistry/07060000000000000000000000007169.drbin \
@@ -150,6 +151,7 @@ service mobicore /vendor/bin/mcDriverDaemon --sfs-reformat --P1 /mnt/vendor/pers
 	-r /vendor/app/mcRegistry/07070000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/07407000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin \
+	-r /vendor/app/mcRegistry/07090000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/6b3f5fa0f8cf55a7be2582587d62d63a.drbin \
 	-r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin
     user root

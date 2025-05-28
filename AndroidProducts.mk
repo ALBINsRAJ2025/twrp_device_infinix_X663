@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/pb_penangf.mk \
-    $(LOCAL_DIR)/twrp_penangf.mk
+    $(LOCAL_DIR)/pb_X663.mk \
+    $(LOCAL_DIR)/twrp_X663.mk
     
 COMMON_LUNCH_CHOICES += \
-     pb_penangf-eng \
-     twrp_penangf-eng
+     pb_X663-eng \
+     twrp_X663-eng
